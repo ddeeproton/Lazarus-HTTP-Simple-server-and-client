@@ -31,7 +31,7 @@ end;
 
 procedure TForm1.ButtonRequestClick(Sender: TObject);
 begin
-  TThreadClient.Create('http://192.168.1.30:8080/page.php?myvariable=test', @OnClientResponse, @OnClientError);
+  TThreadClient.Create('http://127.0.0.1:8080/page.php?myvariable=test', @OnClientResponse, @OnClientError);
 end;
 
 //=========================
