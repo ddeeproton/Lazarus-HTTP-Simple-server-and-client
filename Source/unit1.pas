@@ -47,8 +47,10 @@ end;
 
 
 procedure TForm1.OnServerRequest(Sender: TObject;var ARequest: TFPHTTPConnectionRequest;var AResponse: TFPHTTPConnectionResponse);
+var url: String;
 begin
-  AResponse.Content := 'OnServerRequest from='+ARequest.RemoteAddr+' -> http://'+ARequest.Host+'/'+ARequest.GetNextPathInfo+'?myvariable='+ARequest.QueryFields.Values['myvariable'];
+  url := 'http://'+ARequest.Host+'/'+ARequest.GetNextPathInfo+'?myvariable='+ARequest.QueryFields.Values['myvariable'];
+  AResponse.Content := 'OnServerRequest from='+ARequest.RemoteAddr+' -> '+url;
 end;
 
 
