@@ -52,7 +52,6 @@ end;
 
 ```
 
-
 How to install fpWeb into Lazarus ?
 
 https://wiki.lazarus.freepascal.org/fpWeb_Tutorial
@@ -60,3 +59,9 @@ https://wiki.lazarus.freepascal.org/fpWeb_Tutorial
 Project created on Lazarus 2.0.6
 
 https://www.lazarus-ide.org
+
+## Bugs
+
+The server cannot be stopped after started. 
+
+You will have to use Application.terminate; to kill the server. 
