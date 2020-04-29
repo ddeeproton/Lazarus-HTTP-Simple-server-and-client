@@ -224,7 +224,7 @@ Use Application.terminate; to kill the server.
 
 ## Changes
 
-#0.0.1
+### 0.0.1
 
 First commit
 
