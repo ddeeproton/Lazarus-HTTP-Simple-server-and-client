@@ -2,7 +2,7 @@
 
 This project show how to use the plugin fpWeb with threads. 
 
-![](preview.jpg)
+![](Preview.jpg)
 
 ### How to use ? 
 
