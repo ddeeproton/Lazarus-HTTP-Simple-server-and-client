@@ -10,6 +10,9 @@ uses ..., httpmanager, fphttpserver;
 implementation
 
 //=========================
+// SERVER HTTP
+//=========================
+
 //=========================
 // Server - start
 procedure TForm1.FormCreate(Sender: TObject);
@@ -30,9 +33,11 @@ end;
 
 
 //=========================
+// CLIENT HTTP
+//=========================
+
 //=========================
 // Client - start
-
 procedure TForm1.ButtonRequestClick(Sender: TObject);
 begin
   TThreadClient.Create('http://127.0.0.1:8080/page.php?myvariable=test', @OnClientResponse, @OnClientError);
