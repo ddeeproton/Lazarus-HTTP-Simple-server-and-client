@@ -2,6 +2,8 @@
 
 This project show how to use the plugin fpWeb with threads. 
 
+![](preview.jpg)
+
 ### How to use ? 
 
 ```

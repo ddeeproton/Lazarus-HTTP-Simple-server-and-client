@@ -1,18 +1,19 @@
 object Form1: TForm1
-  Left = 534
+  Left = 303
   Height = 240
-  Top = 224
-  Width = 320
+  Top = 144
+  Width = 711
   Caption = 'Lazarus HTTP Simple server and client'
   ClientHeight = 240
-  ClientWidth = 320
+  ClientWidth = 711
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
   object ButtonRequest: TButton
     Left = 8
     Height = 25
     Top = 16
-    Width = 299
+    Width = 690
+    Anchors = [akTop, akLeft, akRight]
     Caption = 'Request on port 8080'
     OnClick = ButtonRequestClick
     TabOrder = 0
@@ -21,7 +22,8 @@ object Form1: TForm1
     Left = 8
     Height = 178
     Top = 48
-    Width = 296
+    Width = 687
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Lines.Strings = (
       'Memo1'
     )
