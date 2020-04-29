@@ -51,6 +51,7 @@ begin
 end;
 
 ```
+### How to install ?
 
 How to install fpWeb into Lazarus ?
 
