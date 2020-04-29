@@ -36,8 +36,11 @@ implementation
 { TForm1 }
 
 //=========================
-// Server
+// SERVER HTTP
+//=========================
 
+//=========================
+// Server - start
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   Memo1.Clear;
@@ -45,7 +48,8 @@ begin
   TThreadServer.Create(8080, @OnServerRequest);
 end;
 
-
+//=========================
+// Server - Response
 procedure TForm1.OnServerRequest(Sender: TObject;var ARequest: TFPHTTPConnectionRequest;var AResponse: TFPHTTPConnectionResponse);
 var url: String;
 begin
@@ -55,25 +59,29 @@ end;
 
 
 //=========================
-// Client
+// CLIENT HTTP
+//=========================
 
+//=========================
+// Client - start
 procedure TForm1.ButtonRequestClick(Sender: TObject);
 begin
   TThreadClient.Create('http://127.0.0.1:8080/page.php?myvariable=test', @OnClientResponse, @OnClientError);
 end;
 
-
+//=========================
+// Client - client response
 procedure TForm1.OnClientResponse(ThreadClient: TThreadClient);
 begin
   Memo1.lines.Add('OnClientResponse='+ThreadClient.Response);
 end;
 
-
+//=========================
+// Client - client error
 procedure TForm1.OnClientError(ThreadClient: TThreadClient; E: Exception);
 begin
   Memo1.lines.Add('URL:'+ThreadClient.url+' Error:'+ E.Message);
 end;
-
 
 
 end.
