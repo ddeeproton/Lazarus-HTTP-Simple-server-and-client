@@ -64,4 +64,4 @@ https://www.lazarus-ide.org
 
 The server cannot be stopped after started. 
 
-You will have to use Application.terminate; to kill the server. 
+Use Application.terminate; to kill the server. 
