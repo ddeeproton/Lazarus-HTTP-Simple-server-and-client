@@ -65,7 +65,7 @@ https://www.lazarus-ide.org
 
 ### Content of unit httpmanager
 
-This unit create the fphttpserver and the fphttpclient into threads and return results in event functions 
+This unit create the fphttpserver and the fphttpclient into threads and return results in triggers event functions 
 
 ```
 unit httpmanager;
