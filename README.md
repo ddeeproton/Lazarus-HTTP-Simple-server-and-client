@@ -221,3 +221,10 @@ end.
 The server cannot be stopped after started. 
 
 Use Application.terminate; to kill the server. 
+
+## Changes
+
+#0.0.1
+
+First commit
+
