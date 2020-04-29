@@ -1,6 +1,6 @@
 # Lazarus-HTTP-Simple-server-and-client
 
-This project implemented a new class to simply use the plugin fpWeb. 
+This project show how to use the plugin fpWeb with threads. 
 
 ```
 uses ..., httpmanager, fphttpserver;
