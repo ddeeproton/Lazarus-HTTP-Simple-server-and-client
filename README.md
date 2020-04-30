@@ -1,8 +1,8 @@
 # Lazarus-HTTP-Simple-server-and-client
 
-This project show how to use the plugin fpWeb with threads. 
+This project show how to use fpWeb plugin with threads. 
 
-A starting base for others projects.
+( A starting base for others projects )
 
 ![](Preview.jpg)
 
