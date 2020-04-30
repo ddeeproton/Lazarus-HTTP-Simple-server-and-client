@@ -9,9 +9,6 @@ This project show how to use fpWeb plugin with threads.
 ### How to use ? 
 
 ```
-uses ..., httpmanager, fphttpserver;
-...
-implementation
 
 //=========================
 // SERVER HTTP
@@ -32,7 +29,7 @@ procedure TForm1.OnServerRequest(Sender: TObject;var ARequest: TFPHTTPConnection
 var url: String;
 begin
   url := 'http://'+ARequest.Host+'/'+ARequest.GetNextPathInfo+'?myvariable='+ARequest.QueryFields.Values['myvariable'];
-  AResponse.Content := 'OnServerRequest from='+ARequest.RemoteAddr+' -> '+url;          
+  AResponse.Content := 'OnServerRequest from='+ARequest.RemoteAddr+' -> to='+url;
 end;
 
 
@@ -60,6 +57,7 @@ procedure TForm1.OnClientError(ThreadClient: TThreadClient; E: Exception);
 begin
   Memo1.lines.Add('URL:'+ThreadClient.url+' Error:'+ E.Message);
 end;
+  
 
 ```
 ### How to install ?
