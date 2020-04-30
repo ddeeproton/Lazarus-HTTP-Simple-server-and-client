@@ -124,7 +124,7 @@ begin
   try
     Client := TFPHTTPClient.Create(nil);
     try
-      result := Client.Get(http_url);
+      result := Client.Get(http_url).Trim;
       isResponse := result <> '';
     except
       on E: Exception do

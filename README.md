@@ -201,7 +201,7 @@ begin
   try
     Client := TFPHTTPClient.Create(nil);
     try
-      result := Client.Get(http_url);
+      result := Client.Get(http_url).Trim;
       isResponse := result <> '';
     except
       on E: Exception do
@@ -237,3 +237,9 @@ Use Application.terminate; to kill the server.
 
 First commit
 
+### 0.0.2
+
+Add Trim to client result
+```
+result := Client.Get(http_url).Trim;
+```
