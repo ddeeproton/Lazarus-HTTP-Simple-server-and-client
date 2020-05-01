@@ -104,15 +104,18 @@ begin //while not Application.Terminated do begin
 end;
 
 
+
 procedure TThreadClient.OnClientResponse;
 begin
-  PClientResponseFunction(Self);
+  if Assigned(PClientResponseFunction) then
+     PClientResponseFunction(Self);
 end;
 
 
 procedure TThreadClient.OnClientError;
 begin
-  PClientErrorFunction(Self, Error);
+  if Assigned(PClientErrorFunction) then
+     PClientErrorFunction(Self, Error);
 end;
 
 

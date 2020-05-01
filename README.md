@@ -183,14 +183,16 @@ end;
 
 procedure TThreadClient.OnClientResponse;
 begin
-  PClientResponseFunction(Self);
+  if Assigned(PClientResponseFunction) then
+     PClientResponseFunction(Self);
 end;
 
 
 procedure TThreadClient.OnClientError;
 begin
-  PClientErrorFunction(Self, Error);
-end;
+  if Assigned(PClientErrorFunction) then
+     PClientErrorFunction(Self, Error);
+end; 
 
 
 function TThreadClient.get(http_url:String):String;
@@ -242,4 +244,12 @@ First commit
 Add Trim to client result
 ```
 result := Client.Get(http_url).Trim;
+```
+### 0.0.3
+
+Allow to set null in events functions
+```
+if Assigned(PClientResponseFunction) then
+...
+if Assigned(PClientErrorFunction) then 
 ```
